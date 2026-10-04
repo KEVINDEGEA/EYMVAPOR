@@ -155,3 +155,12 @@ footer li{list-style:none;margin-bottom:8px}footer a:hover{color:var(--orange)}
 @media(max-width:720px){.checks,.sub .grid-3{grid-template-columns:1fr}}
 
 nav a.active:not(.btn){color:var(--orange)}
+
+/* Submenú Servicios */
+nav li.has-sub{position:relative}
+nav .car{font-size:.7em}
+nav .sub-menu{position:absolute;top:100%;left:-14px;min-width:260px;background:#fff;list-style:none;padding:8px;border-radius:10px;box-shadow:0 14px 28px rgba(0,0,0,.14);display:none;flex-direction:column;gap:2px;z-index:60}
+nav li.has-sub:hover>.sub-menu,nav li.has-sub:focus-within>.sub-menu{display:flex}
+nav .sub-menu a{display:block;padding:10px 14px;border-radius:6px;white-space:nowrap}
+nav .sub-menu a:hover{background:#f3f6fc}
+@media(max-width:900px){nav .sub-menu{position:static;display:flex;box-shadow:none;padding:0 0 0 14px;min-width:0}}
