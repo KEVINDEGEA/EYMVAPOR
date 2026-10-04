@@ -164,3 +164,5 @@ nav li.has-sub:hover>.sub-menu,nav li.has-sub:focus-within>.sub-menu{display:fle
 nav .sub-menu a{display:block;padding:10px 14px;border-radius:6px;white-space:nowrap}
 nav .sub-menu a:hover{background:#f3f6fc}
 @media(max-width:900px){nav .sub-menu{position:static;display:flex;box-shadow:none;padding:0 0 0 14px;min-width:0}}
+
+.prose{max-width:820px}.prose h2{margin:28px 0 8px}.prose .lead{font-size:1.1rem;color:var(--muted)}.prose p{margin:14px 0}.checks.one{grid-template-columns:1fr}
