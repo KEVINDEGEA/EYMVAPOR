@@ -18,7 +18,7 @@ if (form) form.addEventListener('submit', async e => {
   msg.style.color = '#5B6B7A';
   msg.textContent = 'Enviando...';
   try {
-    const res = await fetch('contact.php', { method: 'POST', body: new FormData(form) });
+    const res = await fetch('/contact.php', { method: 'POST', body: new FormData(form) });
     const data = await res.json();
     msg.style.color = data.ok ? '#1E8E3E' : '#C62828';
     msg.textContent = data.message;
