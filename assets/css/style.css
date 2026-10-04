@@ -153,3 +153,5 @@ footer li{list-style:none;margin-bottom:8px}footer a:hover{color:var(--orange)}
 .checks li{display:flex;gap:10px;color:var(--muted)}.checks li::before{content:"✔";color:var(--orange)}
 .sub .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:28px}
 @media(max-width:720px){.checks,.sub .grid-3{grid-template-columns:1fr}}
+
+nav a.active:not(.btn){color:var(--orange)}
