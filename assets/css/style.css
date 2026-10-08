@@ -74,7 +74,7 @@ nav a{font-weight:500;font-size:.95rem}nav a:hover{color:var(--orange)}
 .values span{background:var(--navy);color:#fff;padding:10px 22px;border-radius:999px;font-weight:500}
 
 /* Servicios */
-.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:44px}
+.grid-4{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px;margin-top:44px}
 .service{background:#fff;border:1px solid #E2E9F0;border-radius:var(--radius);padding:30px 24px;transition:.25s}
 .service:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:var(--orange)}
 .icon{width:58px;height:58px;border-radius:14px;background:rgba(242,107,29,.12);display:grid;place-items:center;margin-bottom:18px;color:var(--orange)}
