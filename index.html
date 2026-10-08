@@ -55,6 +55,15 @@
     </div>
   </div>
   <aside class="hero-card">
+    <svg class="gauge" viewBox="0 0 220 130" role="img" aria-label="Manómetro de presión de vapor">
+      <path d="M20 115a90 90 0 0 1 180 0" fill="none" stroke="rgba(255,255,255,.15)" stroke-width="12" stroke-linecap="round"/>
+      <path class="arc" d="M20 115a90 90 0 0 1 180 0" fill="none" stroke="#F26B1D" stroke-width="12" stroke-linecap="round" pathLength="100"/>
+      <g class="needle"><line x1="110" y1="115" x2="110" y2="42" stroke="#fff" stroke-width="3" stroke-linecap="round"/></g>
+      <circle cx="110" cy="115" r="7" fill="#F26B1D"/>
+      <text x="110" y="100" text-anchor="middle" fill="#fff" font-size="13" font-family="Barlow Condensed,sans-serif" opacity=".7">PRESIÓN · BAR</text>
+    </svg>
+    <div class="steam"><i></i><i></i><i></i></div>
+
     <h3>Precisión en Vapor, Innovación en Control</h3>
     <ul>
       <li>Mantenimiento preventivo y correctivo</li>
@@ -66,9 +75,9 @@
 </div></section>
 
 <div class="stats"><div class="container">
-  <div><b>24/7</b><span>Atención de emergencias</span></div>
-  <div><b>15</b><span>Años de experiencia</span></div>
-  <div><b>100%</b><span>Enfoque en seguridad (SST)</span></div>
+  <div><b data-count="24" data-suf="/7">24/7</b><span>Atención de emergencias</span></div>
+  <div><b data-count="15">15</b><span>Años de experiencia</span></div>
+  <div><b data-count="100" data-suf="%">100%</b><span>Enfoque en seguridad (SST)</span></div>
   <div><b>PE</b><span>Cobertura nacional</span></div>
 </div></div>
 
@@ -101,6 +110,18 @@
       <h3><a href="/eficiencia/">Eficiencia Energética y Combustión</a></h3>
       <p>Análisis de gases, calibración de quemadores y optimización del consumo de combustible para reducir costos operativos y minimizar el impacto ambiental.</p><p style="margin-top:12px"><a href="/eficiencia/" style="color:var(--orange);font-weight:600">Ver más →</a></p>
     </article>
+  </div>
+</div></section>
+
+<section class="calc"><div class="container">
+  <div class="center reveal"><p class="eyebrow">Calculadora</p><h2 class="title">¿Cuánto podrías ahorrar en combustible?</h2><p class="lead">Estimación referencial: una buena calibración de quemador y análisis de gases suele reducir el consumo entre 3% y 8%.</p></div>
+  <div class="calc-box reveal">
+    <label>Gasto mensual en combustible (S/) <b id="c-gasto-v">20 000</b></label>
+    <input type="range" id="c-gasto" min="2000" max="200000" step="1000" value="20000">
+    <label>Ahorro estimado <b id="c-pct-v">5%</b></label>
+    <input type="range" id="c-pct" min="3" max="8" step="1" value="5">
+    <div class="calc-out"><span>Ahorro anual aproximado</span><strong id="c-out">S/ 12 000</strong></div>
+    <a class="btn btn-primary" href="/eficiencia/">Pide un análisis de gases</a>
   </div>
 </div></section>
 

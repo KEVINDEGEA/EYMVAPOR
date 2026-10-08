@@ -30,3 +30,30 @@ if (form) form.addEventListener('submit', async e => {
 });
 
 const yr = document.getElementById('year'); if (yr) yr.textContent = new Date().getFullYear();
+
+// Contadores animados
+document.querySelectorAll('[data-count]').forEach(el => {
+  const end = +el.dataset.count, suf = el.dataset.suf || '';
+  const co = new IntersectionObserver(([e]) => {
+    if (!e.isIntersecting) return; co.disconnect();
+    const t0 = performance.now();
+    (function tick(t) {
+      const k = Math.min((t - t0) / 1400, 1);
+      el.textContent = Math.round(end * (1 - Math.pow(1 - k, 3))) + suf;
+      if (k < 1) requestAnimationFrame(tick);
+    })(t0);
+  });
+  co.observe(el);
+});
+
+// Calculadora de ahorro
+const cg = document.getElementById('c-gasto');
+if (cg) {
+  const cp = document.getElementById('c-pct'), fmt = n => n.toLocaleString('es-PE').replace(/,/g, ' ');
+  const upd = () => {
+    document.getElementById('c-gasto-v').textContent = fmt(+cg.value);
+    document.getElementById('c-pct-v').textContent = cp.value + '%';
+    document.getElementById('c-out').textContent = 'S/ ' + fmt(Math.round(cg.value * 12 * cp.value / 100));
+  };
+  cg.addEventListener('input', upd); cp.addEventListener('input', upd); upd();
+}

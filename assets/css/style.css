@@ -183,3 +183,27 @@ nav>ul>li>a::after{content:"";position:absolute;left:0;bottom:-4px;width:100%;he
 nav>ul>li>a:hover::after{transform:scaleX(1)}
 .reveal:nth-child(2){transition-delay:.1s}.reveal:nth-child(3){transition-delay:.2s}.reveal:nth-child(4){transition-delay:.3s}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+
+/* Hero oscuro industrial */
+.hero{background:radial-gradient(900px 500px at 85% 20%,rgba(242,107,29,.3),transparent 60%),linear-gradient(135deg,#071530,#0E2A5C)}
+.hero-card{backdrop-filter:blur(6px);position:relative}
+.gauge{display:block;width:100%;max-width:300px;margin:0 auto 10px}
+.gauge .arc{stroke-dasharray:100;stroke-dashoffset:28}
+.gauge .needle{transform-origin:110px 115px;transform:rotate(52deg)}
+@media(prefers-reduced-motion:no-preference){.gauge .arc{stroke-dashoffset:100;animation:fill 2.4s .4s cubic-bezier(.2,.7,.2,1) forwards}.gauge .needle{transform:rotate(-90deg);animation:sweep 2.4s .4s cubic-bezier(.2,.7,.2,1) forwards,jitter 3s 3s ease-in-out infinite}}
+@keyframes fill{to{stroke-dashoffset:28}}
+@keyframes sweep{to{transform:rotate(52deg)}}
+@keyframes jitter{0%,100%{transform:rotate(52deg)}50%{transform:rotate(56deg)}}
+.steam{position:absolute;top:-26px;right:34px;display:flex;gap:10px}
+.steam i{width:14px;height:14px;border-radius:50%;background:rgba(255,255,255,.35);filter:blur(5px);animation:up 3s ease-out infinite}
+.steam i:nth-child(2){animation-delay:1s}.steam i:nth-child(3){animation-delay:2s}
+@keyframes up{from{transform:translateY(20px) scale(.6);opacity:.8}to{transform:translateY(-40px) scale(2);opacity:0}}
+/* Calculadora */
+.calc{background:var(--bg)}
+.calc-box{max-width:640px;margin:34px auto 0;background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:32px;border-top:4px solid var(--orange)}
+.calc-box label{display:flex;justify-content:space-between;font-weight:600;color:var(--navy);margin-top:14px}
+.calc-box input[type=range]{width:100%;accent-color:var(--orange);margin:10px 0 4px}
+.calc-out{text-align:center;margin:26px 0 20px}
+.calc-out span{display:block;color:var(--muted)}
+.calc-out strong{font-family:'Barlow Condensed',sans-serif;font-size:3.2rem;color:var(--orange);line-height:1.1}
+.calc-box .btn{display:flex;justify-content:center}
